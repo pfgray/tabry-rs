@@ -20,7 +20,6 @@ defargs @arg-session {
 # Installation
 
 * TODO -- Nix derivation
-* TODO -- fish completion (port from ruby tabry)
 
 ```bash
 # Install:
@@ -35,6 +34,18 @@ vi ~/.local/share/tabry/zellij.tabry # copy the above example into this file
 # Test it out:
 source ~/.bash_profile # or open a new terminal
 zellij #<tab> should now show completions
+```
+
+# Fish
+
+```sh
+# Install tabry-rs & add completions (as shown above)
+
+# source the fish setup functions
+tabry fish | source
+
+# invoke tabry_completion_init for each command:
+tabry_completion_init "zellij"
 ```
 
 # Tabry language
