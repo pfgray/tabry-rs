@@ -1,0 +1,25 @@
+cmd foo
+
+sub bar "The bar command" {
+  arg file {
+    opts const (car motorcycle)
+    opts file
+  }
+  flag dry-run,d "Don't act, only show what would be done"
+  flag something-else,s "This is another flag"
+}
+
+sub baz "The baz command" {
+  arg directory "a directory, yo" {
+    opts const (car motorcycle)
+    opts dir
+    opts file
+  }
+}
+
+sub qux "The qux command" {
+  arg directory {
+    opts const (car motorcycle)
+    opts dir
+  }
+}
